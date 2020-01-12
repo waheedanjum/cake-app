@@ -2,13 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
-RUN
+## RUN
 npm install
 
-#back end Rest API
+## back end Rest API
 npm install json-server --save
 
-run the api server, it shall run on port  3000
+## Run the api server
+it shall run on port  3000
 npm run json-server
 
 ## Development server
