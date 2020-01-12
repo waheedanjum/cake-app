@@ -1,0 +1,64 @@
+
+<div div *ngIf="!selectedCake" class="container">
+  <h2>My Cake Shop</h2>
+  <div>
+    <div *ngFor="let cake of cakes">
+      <div class="d-flex" >
+        <div class="col text-center">
+          <a [routerLink]="" (click)="getCakeById(cake.id)">{{ cake.name }}</a>
+        </div>
+        <div class="col">
+          <img src="{{cake.imageUrl}}" />
+        </div>
+        <div class="col">
+          <button class="btn btn-danger btn-circle text-uppercase" (click)="onDeleteCake(cake.id)">Delete</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div *ngIf="selectedCake" class="container">
+  <h2 class="text-primary">{{ selectedCake.name | uppercase }}</h2>
+    <div class="tab-pane" id="add-comment">
+    <form action="#" method="post" class="form-horizontal" id="commentForm" role="form"> 
+   
+      <div class="form-group">
+        <label for="yumfactor" class="col-sm-2 control-label">YumFactor</label>
+        <div>
+          <select class="form-control" name="yumfactor" id="yumfactor" required [(ngModel)]="selectedCake.yumFactor">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="form-group">
+            <label for="comment" class="col-sm-2 control-label">Comment</label>
+            <div>
+              <textarea class="form-control" name="addComment" id="addComment" rows="2" required [(ngModel)]="selectedCake.comment"></textarea>
+            </div>
+      </div>
+      
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">                    
+                <button class="btn btn-success btn-circle text-uppercase" id="submitComments" (click)="updateCakeById(selectedCake)"><span class="glyphicon glyphicon-send"></span> Submit</button>&nbsp;
+                <button class="btn btn-info btn-circle text-uppercase" id="back" (click)="onBack()">Back</button>
+            </div>
+            <div class="col-sm-offset-2 col-sm-10">                    
+      
+          </div>
+      
+        </div>            
+
+        
+      
+    </form>
+</div>
+
+</div>
+
