@@ -25,9 +25,5 @@ export class CakeService {
     updateCakeById(cake: Cake): Observable<Cake> {
       return this.http.put<Cake>(this.apiUrl + '/' + cake.id, cake);
     }
-    
-    deleteCakeById(id: number) {
-      return this.http.delete(this.apiUrl + '/' + id);  
-    }
-
+  
 }

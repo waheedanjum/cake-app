@@ -3,9 +3,9 @@
     {
       "id": 1,
       "name": "Banana Cake with Cream Cheese",
-      "comment": "reef",
+      "comment": "wqa",
       "imageUrl": "assets/images/1.jpg",
-      "yumFactor": "5"
+      "yumFactor": "2"
     },
     {
       "id": 2,
@@ -17,7 +17,7 @@
     {
       "id": 3,
       "name": "Chocolate Coconut Cake",
-      "comment": "ASDASDASDASDSAD",
+      "comment": "test case",
       "imageUrl": "assets/images/3.jpg",
       "yumFactor": "5"
     },

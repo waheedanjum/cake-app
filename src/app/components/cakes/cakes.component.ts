@@ -24,16 +24,6 @@ export class CakesComponent implements OnInit {
 
   ngOnInit() {} 
 
-  //API call to dlete the cake
-  onDeleteCake(id: number) {
-    this.cakeService.deleteCakeById(id).
-    subscribe(
-      (data: any) => { console.log(data); },
-      (error) => { console.error(error) },
-      () => { console.log(this.selectedCake.name + " has been deleted"); }
-      );
-  }
-
   //APi call to view the cake by Id 
   getCakeById(id: number) {
     this.selectedCake = this.cakes.find(x=> x.id == id);
