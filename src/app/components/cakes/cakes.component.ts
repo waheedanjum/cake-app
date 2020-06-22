@@ -30,7 +30,7 @@ export class CakesComponent implements OnInit {
     subscribe(
       (data: any) => { console.log(data); },
       (error) => { console.error(error) },
-      () => { console.log(this.selectedCake.name + "has been removed"); }
+      () => { console.log(this.selectedCake.name + " has been deleted"); }
       );
   }
 
