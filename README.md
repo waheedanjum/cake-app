@@ -9,8 +9,7 @@ npm install
 npm install json-server --save
 
 ## Run the api server
-it shall run on port  3000
-npm run json-server
+npm run json-server    
 
 ## Development server
 
